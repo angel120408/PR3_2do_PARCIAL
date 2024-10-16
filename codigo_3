@@ -1,0 +1,44 @@
+print(" ")# Sirve para que no se vea amontonado el codigo 
+print("Ramirez Torres Angel Manuel 3°W")#Nombre del alumno
+print("Numer de control: 1206")#numero de control
+print("-INSTRUCCIONES-")#Nos muestra a continuacion las instrucciones
+print("Guardar en un diccionario precios de las frutas en una matriz, luego preguntar al usuario por ")
+print("fruta,")
+print("un número de kilos")
+print("mostrar el precio de ese número de kilos de fruta.")
+print("Si no está la fruta no está en el diccionario debe mostrar un mensaje informando eso mismo")
+print(" ")# Sirve para que no se vea amontonado el codigo 
+
+
+def calcular_precio(fruta, kilos):
+
+    # Diccionario que contiene los precios de las frutas por kilo
+    precios_frutas = {
+        'manzana': 3.0,  # Precio por kilo de manzana
+        'plátano': 2.5,  # Precio por kilo de plátano
+        'naranja': 4.0,  # Precio por kilo de naranja
+        'fresa': 5.0     # Precio por kilo de fresa
+    }
+
+    # Verificar si la fruta ingresada por el usuario está en el diccionario de precios
+    if fruta in precios_frutas:
+        # Si la fruta está disponible, calcular el precio total
+        precio_total = precios_frutas[fruta] * kilos
+        # Da un mensaje de la cantidad de kilos y el precio total
+        return f"El precio de {kilos} kilos de {fruta} es: ${precio_total:.2f}"
+    else:
+        # Si la fruta no está en el diccionario, da un mensaje de error
+        return "La fruta no está en el diccionario."
+
+# Solicitar el nombre de la fruta
+fruta = input("Introduce el nombre de la fruta (manzana, plátano, naranja, fresa): ")
+
+# Solicitar el número de kilos que desea comprar
+kilos = float(input("Introduce el número de kilos: "))
+
+#calcular el precio y almacenar el resultado
+resultado = calcular_precio(fruta, kilos)
+
+print(" ")
+# Mostrar el resultado al usuario en la consola
+print(resultado) 
