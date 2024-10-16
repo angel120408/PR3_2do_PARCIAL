@@ -1,0 +1,35 @@
+print(" ")# Sirve para que no se vea amontonado el codigo 
+print("Ramirez Torres Angel Manuel 3°W")#Nombre del alumno
+print("Numer de control: 1206")#numero de control
+print("-INSTRUCCIONES-")#Nos muestra a continuacion las instrucciones
+print("Preguntar al usuario nombre, edad, dirección y teléfono y lo guarde en un diccionario. ")
+print("Después debe mostrar por pantalla el mensaje ")
+print("<nombre> ")
+print("tiene <edad> años, ")
+print("vive en <dirección> ")
+print("y su número de teléfono es <teléfono>")
+print(" ")# Sirve para que no se vea amontonado el codigo 
+
+class Usuario:
+    def __init__(self, nombre, edad, direccion, telefono):
+        # Inicializar los atributos del usuario con la información proporcionada
+        self.nombre = nombre      # Nombre del usuario
+        self.edad = edad          # Edad del usuario
+        self.direccion = direccion  # Dirección del usuario
+        self.telefono = telefono    # Número de teléfono del usuario
+
+    def mostrar_info(self):
+        # Retornar una cadena para describir la información del usuario 
+        return (f"{self.nombre} tiene {self.edad} años,\n"  #nombre y edad
+                f"vive en {self.direccion} y su número de teléfono es {self.telefono}.")  #dirección y teléfono
+
+# Solicitar la información al usuario
+nombre = input("Introduce tu nombre: ")        # Pregunta por el nombre
+edad = input("Introduce tu edad: ")            # Pregunta por la edad
+direccion = input("Introduce tu dirección: ")   # Pregunta por la dirección
+telefono = input("Introduce tu número de teléfono: ")  # Pregunta por el número de teléfono
+print(" ")
+usuario = Usuario(nombre, edad, direccion, telefono)
+
+# Mostrar la información del usuario 
+print(usuario.mostrar_info())  # Imprime la información del usuario 
